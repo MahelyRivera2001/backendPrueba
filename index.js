@@ -4,6 +4,7 @@ const sequelize = require('./config/db');
 const Vehiculo = require('./models/Vehiculo');
 
 const vehiculosRoutes = require('./routes/vehiculos');
+const colaboradorRoutes = require('./routes/colaborador');
 
 const app = express();
 app.use(cors());
@@ -11,6 +12,7 @@ app.use(express.json());
 
 // Rutas
 app.use('/api/vehiculos', vehiculosRoutes);
+app.use('/api/colaboradores', colaboradorRoutes);
 
 const PORT = process.env.PORT || 5000;
 
