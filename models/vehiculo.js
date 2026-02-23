@@ -1,0 +1,1 @@
+// modelo para entradas y salidas 

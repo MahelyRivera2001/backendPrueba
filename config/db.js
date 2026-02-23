@@ -1,0 +1,1 @@
+// archivo para la configuracion de la base de datos (posgrest)
