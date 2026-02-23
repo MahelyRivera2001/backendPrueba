@@ -1,1 +1,1 @@
-// modelo para vehículo
+// modelo para entradas y salidas 
