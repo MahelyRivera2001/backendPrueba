@@ -1,10 +1,10 @@
 const express = require('express');
 const cors = require('cors');
 const sequelize = require('./config/db');
-const Vehiculo = require('./models/Vehiculo');
 
 const vehiculosRoutes = require('./routes/vehiculos');
 const colaboradorRoutes = require('./routes/colaborador');
+const entradaSalidasRoutes = require('./routes/entradaSalida');
 
 const app = express();
 app.use(cors());
@@ -13,6 +13,7 @@ app.use(express.json());
 // Rutas
 app.use('/api/vehiculos', vehiculosRoutes);
 app.use('/api/colaboradores', colaboradorRoutes);
+app.use('/api/entradas-salidas', entradaSalidasRoutes)
 
 const PORT = process.env.PORT || 5000;
 
