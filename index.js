@@ -10,6 +10,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+//ruta health
+app.get('/', (req, res) => {
+  res.status(200).send('Servidor activo');
+});
+
 // Rutas
 app.use('/api/vehiculos', vehiculosRoutes);
 app.use('/api/colaboradores', colaboradorRoutes);
