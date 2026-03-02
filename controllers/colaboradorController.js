@@ -26,7 +26,7 @@ exports.updateColaborador = async (req, res) => {
         const colaborador = await Colaborador.findByPk(id);
         if (!colaborador) return res.status(404).json({ message: 'Colaborador no encontrado'});
         await colaborador.update({ nombre});
-        res.json(nombre);
+        res.json(colaborador);
     } catch (error) {
         res.status(500).json({ message : error.message});
     }
