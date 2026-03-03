@@ -14,7 +14,7 @@ exports.getEntradas = async (req, res) => {
     try {
         const entradas = await EntradaSalida.findAll({
             where,
-            include: Vehiculo
+            include: [Vehiculo, Colaborador]
         });
         res.json(entradas);
     } catch (error) {
